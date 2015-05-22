@@ -15,7 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      //'src/**/*.js',
       'test/**/*Spec.js'
     ],
 
@@ -28,7 +27,6 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      //'**/*.js'     : ['browserify'],
       'test/**/*Spec.js': ['browserify']
     },
 
@@ -60,7 +58,6 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
-
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     //singleRun: false,
@@ -68,7 +65,8 @@ module.exports = function(config) {
     // browserify configuration
     browserify: {
       debug    : true,
-      transform: ['brfs', 'browserify-shim']
+      extensions: ["js", "hbs"],
+      transform: [['hbsfy', {"extensions": "hbs"}], 'brfs', 'browserify-shim']
     }
   });
 };
