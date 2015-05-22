@@ -1,6 +1,6 @@
 # Karma Browserify Handlebars
 
-A example for [karma-browserify](https://github.com/nikku/karma-browserify) on [#128 (comment)](https://github.com/nikku/karma-browserify/issues/128#event-311073220)
+A sample for [karma-browserify](https://github.com/nikku/karma-browserify) with Handlebars.
 
 ## Usage
 
@@ -19,3 +19,15 @@ karma start
  
 gulp tdd 
 ```
+
+## Relevant plugins or Frameworks
+
+- [Karma](http://karma-runner.github.io/0.12/index.html)
+- [Jasmine](http://jasmine.github.io)
+- [Gulp](http://gulpjs.com)
+- [Browserify](http://browserify.org)
+- [Handlebars](http://handlebarsjs.com)
+
+## License
+
+MIT
