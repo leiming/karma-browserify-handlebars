@@ -7,9 +7,19 @@ var karma = require('karma').server
 var plugins = require('gulp-load-plugins')()
 var hbsfy = require("hbsfy")
 
-/**
- * Watch for file changes and re-run tests on each change
- */
+/**********************
+ * Test task.
+ **********************/
+
+// Run test once and exit
+gulp.task('test', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done)
+})
+
+// Watch for file changes and re-run tests on each change
 gulp.task('tdd', function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js'

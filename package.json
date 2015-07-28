@@ -6,6 +6,10 @@
   "scripts": {
     "test": "karma start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leiming/karma-browserify-handlebars.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,6 +23,7 @@
     "handlebars": "^3.0.3",
     "hbsfy": "^2.2.1",
     "jasmine-core": "^2.3.4",
+    "jquery": "^1.11.3",
     "karma": "^0.12.32",
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.1.12",

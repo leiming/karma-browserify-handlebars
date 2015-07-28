@@ -15,7 +15,21 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*Spec.js'
+      'test/**/*Spec.js',
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
+      {
+        pattern: 'test/**/*.html',
+        watched: true,
+        served: true,
+        included: false
+      },
+      {
+        pattern: 'test/**/*.json',
+        watched: true,
+        served: true,
+        included: false
+      }
     ],
 
 
@@ -27,7 +41,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/**/*Spec.js': ['browserify']
+      'test/**/*Spec.js': ['browserify'],
+      '**/*.html': []
     },
 
 
